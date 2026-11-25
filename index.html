@@ -484,7 +484,7 @@ details.opina{background:none;border:0;padding:0}
         <p class="suave">Tu calificación y tu comentario nos ayudan a mejorar y a que otras personas nos conozcan.</p>
         <form name="resenas" method="POST" data-netlify="true" netlify-honeypot="bot-field" id="resForm" novalidate>
           <input type="hidden" name="form-name" value="resenas">
-          <p class="oculto" aria-hidden="true"><label>No llenar: <input name="bot-field" tabindex="-1" autocomplete="off"></label></p>
+          <p class="oculto" aria-hidden="true"><label>No llenar: <input name="_gotcha" tabindex="-1" autocomplete="off"></label></p>
           <fieldset>
             <legend>Tu calificación</legend>
             <div class="estrellas-input">
@@ -594,7 +594,7 @@ const CONFIG = {
   facebook: "https://www.facebook.com/profile.php?id=61596780273330",
   tiktok: "",
   // Dirección del formulario de opiniones en Formspree (ej: "https://formspree.io/f/xxxxxxxx"). Vacío = Netlify Forms.
-  formularioUrl: "",
+  formularioUrl: "https://formspree.io/f/mbgowzob",
   // Video corto en el encabezado (opcional, sin sonido, 5 a 8 s, menos de 1 MB). Ej: "fotos/hero.mp4"
   heroVideo: "",
   // Video de presentación de Edgar (opcional). Ej: "fotos/presentacion.mp4"
