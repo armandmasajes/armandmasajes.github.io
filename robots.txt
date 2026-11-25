@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://armand-masajes-gt.netlify.app/sitemap.xml
