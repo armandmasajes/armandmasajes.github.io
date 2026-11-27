@@ -93,3 +93,16 @@
 .carta.abre .carta-sello{transform:scale(1.9) rotate(18deg);opacity:0;animation:none;pointer-events:none}
 .carta.abre .carta-papel{opacity:1;transform:none}
 .carta.abre .carta-sobre,.carta.abre .carta-pista,.carta.abre .carta-saltar{opacity:0;transition:opacity .4s}
+
+/* Privacidad y casilla del formulario */
+.link-priv{margin-top:14px;background:none;border:0;font:inherit;font-size:.8rem;color:var(--suave);text-decoration:underline;cursor:pointer;padding:10px 14px}
+.link-priv:hover{color:var(--oro-claro)}
+.priv{border:1px solid var(--linea);border-radius:20px;background:#0c1511;color:var(--texto);padding:0;max-width:min(92vw,560px);width:100%;margin:auto;box-shadow:0 30px 80px rgba(0,0,0,.7)}
+.priv::backdrop{background:rgba(0,0,0,.72);backdrop-filter:blur(3px)}
+.priv-caja{padding:clamp(22px,5vw,34px);max-height:86vh;overflow:auto;text-align:left}
+.priv h2{font-family:var(--serif);font-size:1.9rem;color:var(--oro-claro);margin-bottom:14px}
+.priv p{font-size:.92rem;line-height:1.65;color:var(--suave);margin-bottom:14px}
+.priv p b{color:var(--texto);font-weight:600}
+.priv .btn{margin-top:6px;position:relative!important;inset:auto!important;display:flex;width:100%;justify-content:center;padding:15px 32px;white-space:nowrap}
+.check{display:flex;gap:10px;align-items:flex-start;font-size:.86rem;color:var(--suave);cursor:pointer;line-height:1.4}
+.check input{width:20px;height:20px;margin-top:1px;accent-color:#e2bd78;flex:none}

@@ -239,3 +239,14 @@
   var h3 = $('.mini-quiz h3');
   if (h3) h3.textContent = '¿No sabes cuál elegir? Deja que la magia te guíe';
 })();
+
+/* Aviso de privacidad */
+(function () {
+  var d = document.getElementById('priv'), a = document.getElementById('abrePriv'), c = document.getElementById('cierraPriv');
+  if (!d || !a) return;
+  var abre = function () { if (d.showModal) d.showModal(); else d.setAttribute('open', ''); };
+  var cierra = function () { if (d.close) d.close(); else d.removeAttribute('open'); };
+  a.addEventListener('click', abre);
+  c.addEventListener('click', cierra);
+  d.addEventListener('click', function (e) { if (e.target === d) cierra(); });
+})();

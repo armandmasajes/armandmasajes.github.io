@@ -498,6 +498,7 @@ details.opina{background:none;border:0;padding:0}
             </div>
           </fieldset>
           <label class="campo">Tu nombre (opcional)<input type="text" name="nombre" maxlength="60" autocomplete="given-name"></label>
+          <label class="check"><input type="checkbox" name="ocultar_nombre" value="si"><span>Prefiero que mi nombre no aparezca en la página</span></label>
           <label class="campo">Tu comentario<textarea name="comentario" rows="4" maxlength="600" placeholder="Cuéntanos cómo fue tu experiencia"></textarea></label>
           <button class="btn btn-neon" type="submit" id="resEnviar">Enviar mi opinión</button>
           <p id="resMsg" role="status" aria-live="polite"></p>
@@ -577,8 +578,20 @@ details.opina{background:none;border:0;padding:0}
     <span class="script">Tu salud en buenas manos</span>
     <div class="redes-pie" id="redesPie"></div>
     © <span id="anio"></span> ARMAND · Masajes a domicilio o en casa de Edgar
+    <div><button type="button" class="link-priv" id="abrePriv">Privacidad</button></div>
   </div>
 </footer>
+
+<dialog id="priv" class="priv" aria-labelledby="privT">
+  <div class="priv-caja">
+    <h2 id="privT">Privacidad</h2>
+    <p><b>Qué medimos.</b> Para saber qué partes de la página sirven, usamos dos herramientas: Umami, que cuenta visitas y toques en botones sin guardar datos personales, y Microsoft Clarity, que graba de forma anónima cómo se mueve la gente por la página, sin ver lo que escribes en los campos. Clarity usa cookies propias para eso.</p>
+    <p><b>Lo que tú nos escribes.</b> Si dejas una opinión, llega por correo al negocio mediante Formspree. Usamos tu nombre y tu comentario solo para mostrar tu opinión, y nada más. Si prefieres que tu nombre no aparezca, marca la casilla del formulario.</p>
+    <p><b>WhatsApp.</b> Al tocar "Reservar", se abre tu WhatsApp con un mensaje ya escrito. La conversación queda entre tú y Edgar.</p>
+    <p><b>Tus datos.</b> No vendemos ni compartimos información personal. Para pedir que borremos una opinión o cualquier dato tuyo, escríbenos por WhatsApp.</p>
+    <button type="button" class="btn btn-neon" id="cierraPriv">Entendido</button>
+  </div>
+</dialog>
 
 <div class="barra-movil"><small><b>Desde Q150</b>Reserva por WhatsApp</small><a class="btn btn-neon wa-link" href="#">Reservar</a></div>
 
