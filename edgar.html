@@ -19,9 +19,9 @@ body{background:var(--fondo);color:var(--texto);font-family:Montserrat,system-ui
 .sello span{font-family:'Dancing Script',cursive;font-weight:700;font-size:2.8rem;color:var(--oro-claro);line-height:1}
 h1{font-family:'Dancing Script',cursive;font-size:clamp(3rem,10vw,4.6rem);color:var(--oro);text-align:center;line-height:1.1;margin-bottom:8px}
 .sub{text-align:center;font-family:var(--serif);font-style:italic;font-size:1.4rem;color:var(--oro-claro);margin-bottom:34px}
-.carta{background:linear-gradient(160deg,rgba(20,32,26,.92),rgba(11,18,14,.92));border:1px solid var(--linea);border-radius:20px;padding:clamp(22px,5vw,40px);box-shadow:0 26px 70px rgba(0,0,0,.6),inset 0 0 0 7px rgba(226,189,120,.05)}
-.carta p{margin-bottom:16px;color:var(--texto)}
-.carta h2{font-family:var(--serif);font-size:1.6rem;color:var(--oro-claro);margin:26px 0 12px}
+.papel{background:linear-gradient(160deg,rgba(20,32,26,.92),rgba(11,18,14,.92));border:1px solid var(--linea);border-radius:20px;padding:clamp(22px,5vw,40px);box-shadow:0 26px 70px rgba(0,0,0,.6),inset 0 0 0 7px rgba(226,189,120,.05)}
+.papel p{margin-bottom:16px;color:var(--texto)}
+.papel h2{font-family:var(--serif);font-size:1.6rem;color:var(--oro-claro);margin:26px 0 12px}
 ul{list-style:none;padding:0;display:grid;gap:12px}
 li{padding-left:26px;position:relative;color:var(--suave);font-size:.95rem}
 li b{color:var(--texto);font-weight:600}
@@ -30,7 +30,7 @@ li::before{content:"✦";position:absolute;left:0;color:var(--oro)}
 .btns{display:flex;flex-wrap:wrap;gap:12px;margin-top:26px}
 .btn{flex:1 1 220px;text-align:center;text-decoration:none;font-weight:600;padding:16px 22px;border-radius:999px;color:#1c1405;background:linear-gradient(135deg,#f4e2b8,#e2bd78 55%,#b98a4b);box-shadow:0 8px 24px rgba(0,0,0,.4)}
 .btn.l{background:transparent;color:var(--oro-claro);border:1px solid rgba(226,189,120,.7);box-shadow:none}
-.cinta{display:none}
+body .cinta{display:none}
 </style>
 <link rel="stylesheet" href="magia.css">
 </head>
@@ -40,7 +40,7 @@ li::before{content:"✦";position:absolute;left:0;color:var(--oro)}
     <div class="sello" aria-hidden="true"><span>A</span></div>
     <h1>Para Edgar</h1>
     <p class="sub">Una sorpresa para ti y para tu página</p>
-    <div class="carta">
+    <div class="papel">
       <p>Edgar, esto es para ti.</p>
       <p>Tu página ya está en línea y ahora tiene un poco de magia. Quise que se viera tan cuidada como el trabajo que haces y que quien entre se sienta bien recibido desde el primer momento.</p>
       <h2>Lo nuevo que vas a encontrar</h2>
