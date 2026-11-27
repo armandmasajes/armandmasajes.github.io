@@ -193,8 +193,10 @@
     ]).catch(function () {});
   };
 
+  var cuenta = function (n) { try { if (window.umami) window.umami.track(n); } catch (e) {} };
   toggle.addEventListener('click', function () {
     var abre = panel.hidden;
+    if (abre) cuenta('tarjeta_abierta');
     panel.hidden = !abre;
     toggle.setAttribute('aria-expanded', String(abre));
     toggle.textContent = abre ? 'Ocultar tarjeta' : 'Crear tarjeta de regalo';
@@ -204,6 +206,7 @@
     }
   });
 
+  $('tjWa').addEventListener('click', function () { cuenta('tarjeta_pedida_whatsapp'); });
   function blob(cb) { fuentes().then(function () { dibuja(); cv.toBlob(cb, 'image/png'); }); }
   var nombreArchivo = function () {
     var p = ($('tjPara').value.trim() || 'regalo').toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '').replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
@@ -211,6 +214,7 @@
   };
 
   $('tjDesc').addEventListener('click', function () {
+    cuenta('tarjeta_descargada');
     blob(function (b) {
       var a = document.createElement('a');
       a.href = URL.createObjectURL(b); a.download = nombreArchivo();
@@ -224,6 +228,7 @@
     if (navigator.canShare && navigator.canShare({ files: [prueba] })) {
       var bc = $('tjComp'); bc.hidden = false;
       bc.addEventListener('click', function () {
+        cuenta('tarjeta_compartida');
         blob(function (b) {
           var f = new File([b], nombreArchivo(), { type: 'image/png' });
           navigator.share({ files: [f], title: 'Tarjeta de regalo ARMAND', text: 'Un regalo de ARMAND: un momento de calma.' }).catch(function () {});

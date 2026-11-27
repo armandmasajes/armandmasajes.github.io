@@ -41,6 +41,7 @@
   function abrir() {
     if (abierta) return; abierta = true;
     ov.classList.add('abre');
+    try { if (window.umami) window.umami.track('carta_abierta'); } catch (e) {}
     var s = ov.querySelector('.carta-sello').getBoundingClientRect();
     if (window.armandChispa) window.armandChispa(s.left + s.width / 2, s.top + s.height / 2, 70, 4.6);
     setTimeout(cerrar, 2800);
