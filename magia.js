@@ -64,6 +64,7 @@
     if (chispas.length > 220) chispas.splice(0, chispas.length - 220);
     if (!raf2) raf2 = requestAnimationFrame(pinta);
   }
+  window.armandChispa = chispa;
   addEventListener('pointerdown', function (e) { chispa(e.clientX, e.clientY, 9, 2); }, { passive: true });
   var ult = 0;
   addEventListener('pointermove', function (e) {
