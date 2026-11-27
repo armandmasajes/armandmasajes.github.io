@@ -348,6 +348,7 @@ details.opina{background:none;border:0;padding:0}
 }
 .btn:focus-visible,.quiz-btn:focus-visible,summary:focus-visible{outline:3px solid var(--oro-claro);outline-offset:3px}
 </style>
+<link rel="stylesheet" href="magia.css">
 </head>
 <body>
 <a class="skip" href="#inicio">Saltar al contenido</a>
@@ -865,5 +866,6 @@ document.head.appendChild(faqLd);
 const io = new IntersectionObserver(es => es.forEach(e => { if(e.isIntersecting){ e.target.classList.add('ok'); io.unobserve(e.target);} }), {threshold:.12});
 document.querySelectorAll('.rev').forEach(el => io.observe(el));
 </script>
+<script src="magia.js" defer></script>
 </body>
 </html>

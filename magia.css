@@ -1,0 +1,55 @@
+/* Capa de magia y Navidad de ARMAND. Todo es decorativo (aria-hidden) y se apaga con "reducir movimiento". */
+
+/* Cinta de cuenta regresiva (solo en temporada) */
+.cinta{display:block;text-align:center;padding:9px 16px;font-size:.82rem;letter-spacing:.04em;color:var(--oro-claro);background:linear-gradient(90deg,#4a0f1a,#7a1f2b 50%,#4a0f1a);border-bottom:1px solid rgba(226,189,120,.45);position:relative;z-index:70}
+.cinta b{font-weight:600;color:#fff}
+@media(max-width:480px){.cinta{font-size:.74rem;letter-spacing:0;padding:8px 10px}.cinta u{margin-left:0}}
+.cinta .est{color:var(--oro);display:inline-block;animation:brilla 2.4s ease-in-out infinite}
+.cinta u{text-decoration:none;border-bottom:1px solid rgba(226,189,120,.6);margin-left:4px}
+@keyframes brilla{50%{opacity:.35;transform:scale(.8)}}
+
+/* Hero */
+.hero{position:relative;padding-top:clamp(96px,9vw,132px)}
+.hero-grid{position:relative;z-index:2}
+@media(max-width:860px){.hero{padding-top:92px}}
+
+/* Velas flotantes (como un gran comedor encantado) */
+.velas{position:absolute;left:0;right:0;top:0;height:140px;z-index:1;pointer-events:none;opacity:.8;-webkit-mask-image:linear-gradient(#000 62%,transparent);mask-image:linear-gradient(#000 62%,transparent)}
+.vela{position:absolute;left:var(--x);top:var(--y);width:9px;height:calc(var(--h) * 1px);margin-left:-4px;border-radius:2px 2px 1px 1px;background:linear-gradient(90deg,#cfc3a3,#fbf3dc 45%,#c4b690);animation:flota 5s ease-in-out var(--d) infinite alternate;transition:transform .6s}
+.vela::before{content:"";position:absolute;left:50%;bottom:100%;width:8px;height:16px;margin:0 0 2px -4px;border-radius:50% 50% 50% 50%/62% 62% 38% 38%;background:radial-gradient(ellipse at 50% 72%,#fff6d0,#ffd36a 45%,rgba(255,170,60,0) 76%);filter:drop-shadow(0 0 7px rgba(255,200,100,.9));animation:llama .2s ease-in-out infinite alternate}
+.vela::after{content:"";position:absolute;left:50%;bottom:100%;width:78px;height:78px;margin:0 0 -22px -39px;border-radius:50%;background:radial-gradient(circle,rgba(255,205,110,.28),transparent 68%);pointer-events:none}
+.velas.aviva .vela{filter:brightness(1.5) saturate(1.2)}
+@keyframes flota{from{transform:translateY(-7px)}to{transform:translateY(8px)}}
+@keyframes llama{from{transform:scale(1,.9) skewX(-4deg)}to{transform:scale(.94,1.08) skewX(4deg)}}
+
+/* Nieve dorada */
+.nieve{position:absolute;inset:0;width:100%;height:100%;z-index:1;pointer-events:none}
+
+/* Chispas al tocar */
+.chispas{position:fixed;inset:0;width:100%;height:100%;z-index:90;pointer-events:none}
+
+/* Esfera dorada con alas */
+.esfera{position:absolute;left:0;top:0;width:46px;height:46px;z-index:3;cursor:pointer;display:none;touch-action:manipulation;-webkit-tap-highlight-color:transparent}
+.esfera i{position:absolute;left:16px;top:16px;width:14px;height:14px;border-radius:50%;background:radial-gradient(circle at 35% 30%,#fff3c4,#e2bd78 55%,#b98a4b);box-shadow:0 0 14px rgba(255,214,120,.95)}
+.esfera b{position:absolute;top:17px;width:17px;height:8px;background:linear-gradient(rgba(255,255,255,.9),rgba(255,255,255,.12));animation:aleta .09s ease-in-out infinite alternate}
+.esfera b:nth-of-type(1){right:30px;border-radius:100% 0 0 0;transform-origin:100% 100%}
+.esfera b:nth-of-type(2){left:30px;border-radius:0 100% 0 0;transform-origin:0 100%;animation-direction:alternate-reverse}
+@keyframes aleta{from{transform:rotate(-24deg) scaleY(.7)}to{transform:rotate(18deg) scaleY(1.05)}}
+
+/* Aviso */
+.aviso-magico{position:fixed;left:50%;bottom:96px;transform:translate(-50%,20px);z-index:95;max-width:min(88vw,420px);padding:13px 22px;border-radius:999px;font-size:.92rem;text-align:center;color:#1c1405;background:linear-gradient(135deg,#f4e2b8,#e2bd78);box-shadow:0 10px 34px rgba(0,0,0,.55),0 0 28px rgba(226,189,120,.55);opacity:0;pointer-events:none;transition:opacity .4s,transform .4s}
+.aviso-magico.ver{opacity:1;transform:translate(-50%,0)}
+
+/* Regalo de Navidad */
+#regalo{position:relative;overflow:hidden}
+#regalo .regalo-caja{position:relative;z-index:2}
+#regalo.navidad{background:radial-gradient(700px 380px at 85% 50%,rgba(226,189,120,.2),transparent 65%),radial-gradient(520px 320px at 5% 100%,rgba(122,31,43,.4),transparent 70%),#0e0c07;padding-top:clamp(70px,8vw,110px)}
+.luces{position:absolute;left:0;right:0;top:0;display:flex;height:34px;z-index:1;pointer-events:none}
+.luz{position:relative;flex:1}
+.luz::before{content:"";position:absolute;left:0;right:0;top:-16px;height:26px;border-bottom:1px solid rgba(226,189,120,.4);border-radius:50%}
+.luz i{position:absolute;left:50%;top:9px;width:9px;height:13px;margin-left:-4px;border-radius:50% 50% 45% 45%/40% 40% 60% 60%;background:var(--c);box-shadow:0 0 12px 2px var(--c);animation:titila 2.2s ease-in-out var(--d) infinite}
+@keyframes titila{0%,100%{opacity:1}50%{opacity:.28}}
+
+@media(prefers-reduced-motion:reduce){
+  .vela,.vela::before,.cinta .est,.luz i,.esfera b{animation:none}
+}
